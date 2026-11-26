@@ -164,7 +164,17 @@ export default function Rapports() {
             <p className="text-sm text-gray-600">
               {b.nb_visites ?? 0} visites · {b.nb_promenades ?? 0} promenades
             </p>
-            {b.commentaire && (
+           <a
+              href={"/rapports/" + b.id}
+              className="mt-2 inline-block text-sm font-semibold text-green-700 underline"
+            >
+              Voir le rapport →
+             <a
+              href={"/rapports/" + b.id}
+              className="mt-2 inline-block text-sm font-semibold text-green-700 underline"
+            >
+              Voir le rapport →
+            </a>{b.commentaire && (
               <p className="mt-1 text-sm text-gray-600">{b.commentaire}</p>
             )}
           </li>
